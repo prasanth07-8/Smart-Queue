@@ -1,0 +1,168 @@
+.home-container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('/images/hero-bg.jpg') no-repeat center center/cover;
+  color: white;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #005f87;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  max-width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+}
+
+/* Queue Preview Section */
+.queue-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.queue-preview img {
+  max-width: 500px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.queue-preview p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+
+
+
+/* .home-container {
+  padding: 6.2rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: 	#0d3c4e;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color:#17a2b8;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: 	#148799;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #17a2b8;
+  color: 	#17a2b8;
+}
+
+.btn.outline:hover {
+  background-color: 	#17a2b8;
+  color: white;
+} */

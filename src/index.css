@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #004080;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+
+
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+}
+
+.home-content {
+  max-width: 500px;
+}
+
+.home-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+.home-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #0059b3;
+}
+
+@media (max-width: 600px) {
+  .home-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-content p {
+    font-size: 0.95rem;
+  }
+
+  .explore-btn {
+    width: 100%;
+  }
+}
+

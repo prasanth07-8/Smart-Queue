@@ -1,0 +1,102 @@
+.queue-container {
+  max-width: 550px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.queue-container h2 {
+  color: #0d3c4e;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #0d3c4e;
+  margin-bottom: 1.5rem;
+}
+
+.info-msg {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.info-msg button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info-msg button:hover {
+  background-color: #138496;
+}
+
+.token-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px dashed #17a2b8;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.token-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.token-box th, .token-box td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.token-box th {
+  background-color: #17a2b8;
+  color: white;
+  font-weight: 600;
+}
+
+.token-box tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.error-msg {
+  color: #dc3545;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.loading-msg {
+  font-size: 1rem;
+  color: #0d3c4e;
+  margin-top: 1rem;
+}
+
+.register-btn {
+  background-color: #4cafef;
+  color: white;
+  padding: 10px 18px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0288d1;
+}

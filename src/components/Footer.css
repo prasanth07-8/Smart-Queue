@@ -1,0 +1,32 @@
+.app-footer {
+  background-color: #6c757d;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links p {
+  color: white;
+  text-decoration: none;
+  background-color: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-links p:hover {
+  text-decoration: underline;
+}
