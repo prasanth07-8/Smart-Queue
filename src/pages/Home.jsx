@@ -2,6 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaClock, FaMobileAlt, FaUserMd } from "react-icons/fa";
+// import homebg from "../public/image.png";
 import "./Home.css";
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
         </div>
         {/* Optional Illustration */}
         <div className="hero-image">
-          <img src="/images/hero-illustration.png" alt="Queue Illustration" />
+          <img src="/public/image.png" alt="Queue Illustration" />
         </div>
       </section>
 
@@ -48,7 +49,7 @@ const Home = () => {
 
       {/* Optional: Queue Illustration Section */}
       <section className="queue-preview">
-        <img src="/images/queue-preview.png" alt="Queue Preview" />
+        <img src="/public/image.png" alt="Queue Preview" />
         <p>View live queue updates and track your token status in real-time.</p>
       </section>
     </div>
