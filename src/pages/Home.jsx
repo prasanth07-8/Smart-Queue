@@ -49,7 +49,7 @@ const Home = () => {
 
       {/* Optional: Queue Illustration Section */}
       <section className="queue-preview">
-        <img src="/public/image.png" alt="Queue Preview" />
+        <img src="/Queue_preview.png" alt="Queue Preview" />
         <p>View live queue updates and track your token status in real-time.</p>
       </section>
     </div>
