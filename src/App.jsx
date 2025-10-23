@@ -13,6 +13,8 @@ import AdminLogin from './pages/AdminLogin';
 import Dashboard from './pages/Dashboard';
 import Contact from './pages/Contact';
 import SignUp from './pages/signup';
+import Profile from './pages/Profile';
+
 
 const App = () => {
   return (
@@ -34,6 +36,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/profile" element={<Profile />} />
 
         <Route path="/contact" element={<Contact />} />
       </Routes>

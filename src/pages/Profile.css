@@ -1,0 +1,79 @@
+.profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #343a40;
+}
+
+.profile-info {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h3 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: center;
+}
+
+.history-table th {
+  background: #e9ecef;
+}
+
+.served {
+  color: green;
+  font-weight: bold;
+}
+
+.missed {
+  color: red;
+  font-weight: bold;
+}
+
+.applied {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}

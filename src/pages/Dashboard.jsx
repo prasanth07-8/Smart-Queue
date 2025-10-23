@@ -6,16 +6,17 @@ import { useAuth } from "../context/AuthContext";
 import { io } from "socket.io-client";
 import "./Dashboard.css";
 
-const socket = io("http://localhost:5000"); // ✅ match backend server
+const socket = io("http://localhost:5000"); // match your backend
 
 const Dashboard = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
+
   const [tokens, setTokens] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ✅ Fetch tokens (admin only)
+  // Fetch all tokens (admin only)
   const fetchTokens = async () => {
     try {
       setLoading(true);
@@ -30,10 +31,12 @@ const Dashboard = () => {
     }
   };
 
-  // ✅ Update token status
+  // Update token status
   const updateStatus = async (id, status) => {
     try {
-      await API.patch(`/tokens/${id}`, { status });
+      if (!id) return;
+
+      await API.put(`/tokens/${id}/status`, { status }); // ✅ Correct route
       socket.emit("tokenUpdated"); // notify others
       fetchTokens();
     } catch (err) {
@@ -44,11 +47,13 @@ const Dashboard = () => {
   useEffect(() => {
     if (!user || user.role !== "admin") {
       navigate("/login"); // prevent normal user access
-    } else {
-      fetchTokens();
-      socket.on("tokenUpdated", fetchTokens);
-      return () => socket.off("tokenUpdated", fetchTokens);
+      return;
     }
+
+    fetchTokens();
+    socket.on("tokenUpdated", fetchTokens);
+
+    return () => socket.off("tokenUpdated", fetchTokens);
   }, [user]);
 
   return (
@@ -63,7 +68,7 @@ const Dashboard = () => {
       ) : error ? (
         <p className="error-msg">{error}</p>
       ) : tokens.length === 0 ? (
-        <p className="info-msg">No tokens registered yet.</p>
+        <p className="empty">No tokens registered yet.</p>
       ) : (
         <div className="token-box">
           <table>
@@ -85,13 +90,13 @@ const Dashboard = () => {
                   <td>{t.status || "Pending"}</td>
                   <td>
                     <button
-                      className="btn serve"
+                      className="action-btn served"
                       onClick={() => updateStatus(t._id, "Served")}
                     >
                       Serve
                     </button>
                     <button
-                      className="btn skip"
+                      className="action-btn missed"
                       onClick={() => updateStatus(t._id, "Missed")}
                     >
                       Skip
@@ -104,9 +109,13 @@ const Dashboard = () => {
         </div>
       )}
 
+      {/* Logout and back buttons at bottom */}
       <div className="bottom-nav">
         <button className="btn" onClick={() => navigate("/")}>
           ⬅ Back to Home
+        </button>
+        <button className="logout-btn" onClick={logout}>
+          Logout
         </button>
       </div>
     </div>
